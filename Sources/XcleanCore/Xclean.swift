@@ -1,13 +1,12 @@
 import Foundation
+import ArgumentParser
+import ShellOut
 
-public final class Xclean {
-    private let arguments: [String]
+public struct Xclean: ParsableCommand {
+    public static let configuration = CommandConfiguration(
+        abstract: "Cleans up",
+        subcommands: [Open.self]
+    )
 
-    public init(arguments: [String] = CommandLine.arguments) {
-        self.arguments = arguments
-    }
-
-    public func run() throws {
-        print("Hello \(arguments[1])")
-    }
+    public init() {}
 }
