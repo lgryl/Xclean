@@ -14,9 +14,9 @@
             buildForAnalyzing = "YES">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "Xclean::XcleanCore"
-               BuildableName = "XcleanCore.framework"
-               BlueprintName = "XcleanCore"
+               BlueprintIdentifier = "Xclean::Xclean"
+               BuildableName = "Xclean"
+               BlueprintName = "Xclean"
                ReferencedContainer = "container:Xclean.xcodeproj">
             </BuildableReference>
          </BuildActionEntry>
@@ -28,9 +28,9 @@
             buildForAnalyzing = "YES">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "Xclean::Xclean"
-               BuildableName = "Xclean"
-               BlueprintName = "Xclean"
+               BlueprintIdentifier = "Xclean::XcleanCore"
+               BuildableName = "XcleanCore.framework"
+               BlueprintName = "XcleanCore"
                ReferencedContainer = "container:Xclean.xcodeproj">
             </BuildableReference>
          </BuildActionEntry>

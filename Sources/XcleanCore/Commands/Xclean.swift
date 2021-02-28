@@ -4,8 +4,8 @@ import ShellOut
 
 public struct Xclean: ParsableCommand {
     public static let configuration = CommandConfiguration(
-        abstract: "Cleans up",
-        subcommands: [Open.self]
+        abstract: "Utility to help you clean up Xcode files",
+        subcommands: [Open.self, Info.self, Clean.self]
     )
 
     public init() {}
