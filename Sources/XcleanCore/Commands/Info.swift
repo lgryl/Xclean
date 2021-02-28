@@ -8,11 +8,12 @@ import Files
 extension Xclean {
     struct Info: ParsableCommand {
         static let configuration = CommandConfiguration(
-            abstract: "Prints info about disk usage"
+            abstract: "Print info about disk usage"
         )
         @Argument(help: ArgumentHelp("The location to be displayed info about", discussion: Location.availableLocationsDescription, valueName: "location"))
         var location: Location
-        
+        @Flag(name: .shortAndLong, help: "Show combined disk usage from all subfolders")
+        var combined = false
 
         public func validate() throws {
             do {
@@ -24,7 +25,13 @@ extension Xclean {
 
         public func run() {
             do {
-                let result = try shellOut(to: "du -hs \(location.path.escapingSpaces) | cut -f1")
+                var command = "du -hs \(location.path.escapingSpaces)"
+                if combined {
+                    command += " | cut -f1"
+                } else {
+                    command += "/* | sort -rh"
+                }
+                let result = try shellOut(to: command)
                 print(result)
             } catch {
                 print("Error")

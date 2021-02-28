@@ -8,7 +8,7 @@ import Files
 extension Xclean {
     struct Clean: ParsableCommand {
         static let configuration = CommandConfiguration(
-            abstract: "Removes content of selected location"
+            abstract: "Remove content of selected location"
         )
         @Argument(help: ArgumentHelp("The location to be cleaned", discussion: Location.availableLocationsDescription, valueName: "location"))
 

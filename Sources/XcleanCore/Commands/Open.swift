@@ -8,7 +8,7 @@ import Files
 extension Xclean {
     struct Open: ParsableCommand {
         static let configuration = CommandConfiguration(
-            abstract: "Opens selected location in Finder"
+            abstract: "Open selected location in Finder"
         )
         @Argument(help: ArgumentHelp("The location to be opened", discussion: Location.availableLocationsDescription, valueName: "location"))
         var location: Location
