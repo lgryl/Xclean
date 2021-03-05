@@ -1605,12 +1605,12 @@
       "OBJ_74" = {
          isa = "PBXGroup";
          children = (
-            "Xclean::Xclean::Product",
-            "swift-argument-parser::ArgumentParser::Product",
-            "Files::Files::Product",
-            "Xclean::XcleanTests::Product",
             "ShellOut::ShellOut::Product",
-            "Xclean::XcleanCore::Product"
+            "Files::Files::Product",
+            "Xclean::XcleanCore::Product",
+            "Xclean::XcleanTests::Product",
+            "Xclean::Xclean::Product",
+            "swift-argument-parser::ArgumentParser::Product"
          );
          name = "Products";
          path = "";

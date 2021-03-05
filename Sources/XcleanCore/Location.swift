@@ -6,6 +6,7 @@ import ArgumentParser
 enum Location: String, CaseIterable {
     case derivedData
     case deviceSupport
+    case delme
 
     var path: String {
         switch self {
@@ -13,6 +14,8 @@ enum Location: String, CaseIterable {
             return "~/Library/Developer/Xcode/DerivedData"
         case .deviceSupport:
             return "~/Library/Developer/Xcode/iOS DeviceSupport"
+        case .delme:
+            return "~/delme"
         }
     }
 }
@@ -29,6 +32,6 @@ extension Location {
     }
 
     static var availableLocationsDescription: String {
-        "AvailableLocations:\n" + availableLocations
+        "Available locations:\n" + availableLocations
     }
 }

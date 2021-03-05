@@ -25,6 +25,7 @@ extension Xclean {
 
         public func run() {
             do {
+                print(location.path)
                 var command = "du -hs \(location.path.escapingSpaces)"
                 if combined {
                     command += " | cut -f1"

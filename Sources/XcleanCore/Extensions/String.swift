@@ -4,6 +4,8 @@ import Foundation
 
 extension String {
     var escapingSpaces: String {
-        return replacingOccurrences(of: " ", with: "\\ ")
+        replacingOccurrences(of: " ", with: "\\ ")
+            .replacingOccurrences(of: "(", with: "\\(")
+            .replacingOccurrences(of: ")", with: "\\)")
     }
 }
