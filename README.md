@@ -1,3 +1,3 @@
 # Xclean
 
-A description of this package.
+A command line tool to clean up after Xcode.
